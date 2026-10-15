@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f4efe6;
+  --color-surface: #fffcf6;
+  --color-ink: #1d2420;
+  --color-ink-2: #4a504b;
+  --color-muted: #5b605a;
+  --color-line: #d9cfbd;
+  --color-contour: #cfc3ac;
+  --color-green: #2f5d46;
+  --color-green-hover: #1f4232;
+  --color-sage: #a9c3a6;
+  --color-sand: #e6dccb;
+  --color-terracotta: #c8734f;
+  --color-terracotta-text: #a4532f;
+
+  --font-display: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --breakpoint-lg: 56.25rem;
+
+  --radius-card: 18px;
+  --radius-card-sm: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--color-green);
+}
+
+a:hover {
+  color: var(--color-green-hover);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-green);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
