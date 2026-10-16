@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # Photo originals (only the optimised public/ copy is published)
-Photos/
+/Photos/

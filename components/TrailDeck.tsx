@@ -1,18 +1,13 @@
 "use client";
 
-import { useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { deckCards } from "@/lib/content";
 import { DeckIcon } from "./deck-icons";
-
-const SWIPE_PX = 40;
+import { useDeck } from "./useDeck";
 
 export function TrailDeck() {
   const reduceMotion = useReducedMotion();
-  const [order, setOrder] = useState(() => deckCards.map((_, i) => i));
-  const startX = useRef<number | null>(null);
-
-  const shuffle = () => setOrder((o) => [...o.slice(1), o[0]]);
+  const { order, shuffle, swipe } = useDeck(deckCards.length);
   const top = deckCards[order[0]];
 
   return (
@@ -28,21 +23,7 @@ export function TrailDeck() {
 
       <div
         className="relative h-[236px] w-[290px] touch-pan-y lg:absolute lg:bottom-[-3px] lg:left-[44px]"
-        onPointerDown={(e) => {
-          startX.current = e.clientX;
-        }}
-        onPointerUp={(e) => {
-          if (
-            startX.current !== null &&
-            Math.abs(e.clientX - startX.current) > SWIPE_PX
-          ) {
-            shuffle();
-          }
-          startX.current = null;
-        }}
-        onPointerCancel={() => {
-          startX.current = null;
-        }}
+        {...swipe}
       >
         {deckCards.map((c, i) => {
           const p = order.indexOf(i);

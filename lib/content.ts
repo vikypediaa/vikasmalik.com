@@ -159,8 +159,40 @@ export const builds = {
 export const about = {
   label: "04 · Off the trail",
   body: "When I'm not at my desk, I'm usually on a trail somewhere in the UK: running, hiking, or stopping too often to take photos. It's where I do my best thinking, and it's why I'm building Hikedaily. Outside the day job, I'm learning to build with AI and sharing what works (and what breaks) on LinkedIn.",
-  photoAlt:
-    "Old stone watermill beside a mossy stream in Borrowdale, Lake District",
+  // Captions and alt text for photos 2 to 5 are drafted from the image content and file names. Vikas to confirm places.
+  photos: [
+    {
+      src: "/photos/watermill.jpg",
+      place: "Borrowdale, Lake District",
+      alt: "Old stone watermill beside a mossy stream in Borrowdale, Lake District",
+      position: "35% 50%",
+    },
+    {
+      src: "/photos/vestrahorn.jpg",
+      place: "Vestrahorn, Iceland",
+      alt: "Jagged mountains above black sand dunes and golden grass, with a lone walker in a red jacket",
+      position: "62% 50%",
+    },
+    {
+      src: "/photos/glen-etive.jpg",
+      place: "Glen Etive, Scotland",
+      alt: "A snow-dusted peak and bare winter trees reflected in still water",
+      position: "45% 50%",
+    },
+    {
+      src: "/photos/lago-di-braies.jpg",
+      place: "Lago di Braies, Dolomites",
+      alt: "Four wooden rowing boats on a calm green lake below pine forest and rocky peaks",
+      position: "45% 50%",
+    },
+    {
+      // TODO: confirm location for this photo.
+      src: "/photos/autumn-river.jpg",
+      place: "Autumn river",
+      alt: "Autumn woodland above a white-water river tumbling over mossy rocks",
+      position: "40% 50%",
+    },
+  ],
   tags: [
     "Trail running",
     "Hiking",

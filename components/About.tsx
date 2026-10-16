@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { about } from "@/lib/content";
+import { PhotoDeck } from "./PhotoDeck";
 
 export function About() {
   return (
@@ -26,15 +26,7 @@ export function About() {
             ))}
           </ul>
         </div>
-        <div className="relative h-[320px] w-full overflow-hidden rounded-[200px_200px_24px_24px] bg-sand lg:h-[380px] lg:w-[300px] lg:flex-none">
-          <Image
-            src="/off-the-trail.jpg"
-            alt={about.photoAlt}
-            fill
-            sizes="(min-width: 900px) 300px, 100vw"
-            className="object-cover object-[50%_40%]"
-          />
-        </div>
+        <PhotoDeck />
       </div>
     </section>
   );
