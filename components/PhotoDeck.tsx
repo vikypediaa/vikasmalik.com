@@ -52,9 +52,11 @@ export function PhotoDeck() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex justify-between font-mono text-[11px] font-semibold tracking-[0.04em] text-ink-2">
-                <span>WP {String(i + 1).padStart(2, "0")}</span>
-                <span>{ph.place}</span>
+              <div className="flex items-start justify-between gap-3 font-mono text-[11px] font-semibold tracking-[0.04em] text-ink-2">
+                <span className="shrink-0 whitespace-nowrap">
+                  WP {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-right leading-tight">{ph.place}</span>
               </div>
             </motion.div>
           );

@@ -159,7 +159,7 @@ export const builds = {
 export const about = {
   label: "04 · Off the trail",
   body: "When I'm not at my desk, I'm usually on a trail somewhere in the UK: running, hiking, or stopping too often to take photos. It's where I do my best thinking, and it's why I'm building Hikedaily. Outside the day job, I'm learning to build with AI and sharing what works (and what breaks) on LinkedIn.",
-  // Captions and alt text for photos 2 to 5 are drafted from the image content and file names. Vikas to confirm places.
+  // Captions for photos 2 to 5 drafted from the image content and file names; Vikas confirmed them.
   photos: [
     {
       src: "/photos/watermill.jpg",
@@ -186,10 +186,9 @@ export const about = {
       position: "45% 50%",
     },
     {
-      // TODO: confirm location for this photo.
       src: "/photos/autumn-river.jpg",
-      place: "Autumn river",
-      alt: "Autumn woodland above a white-water river tumbling over mossy rocks",
+      place: "Autumn colours in the Lake District",
+      alt: "Autumn colours in the Lake District: woodland above a white-water river tumbling over mossy rocks",
       position: "40% 50%",
     },
   ],
