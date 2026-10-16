@@ -42,3 +42,5 @@ next-env.d.ts
 
 # Photo originals (only the optimised public/ copy is published)
 /Photos/
+
+!.env.example

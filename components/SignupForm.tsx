@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 
-// TODO(spec s8): provider not chosen (Kit or Beehiiv). Set NEXT_PUBLIC_SIGNUP_ENDPOINT to a URL
-// that accepts POST {"email": "..."} as JSON.
-const ENDPOINT = process.env.NEXT_PUBLIC_SIGNUP_ENDPOINT;
+// Posts to /api/subscribe, which adds the address to Kit (see app/api/subscribe/route.ts).
+const ENDPOINT = "/api/subscribe";
 
 type Status = "idle" | "sending" | "done" | "error" | "unconfigured";
 
@@ -20,19 +19,20 @@ export function SignupForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const email = new FormData(e.currentTarget).get("email");
-    if (!ENDPOINT) {
-      setStatus("unconfigured");
-      return;
-    }
+    const form = new FormData(e.currentTarget);
     setStatus("sending");
     try {
       const res = await fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email: form.get("email"),
+          company: form.get("company"),
+        }),
       });
-      setStatus(res.ok ? "done" : "error");
+      setStatus(
+        res.ok ? "done" : res.status === 503 ? "unconfigured" : "error",
+      );
     } catch {
       setStatus("error");
     }
@@ -45,6 +45,14 @@ export function SignupForm() {
         learned. No spam, unsubscribe anytime.
       </p>
       <div className="flex flex-col gap-3 sm:flex-row">
+        <input
+          name="company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute -left-[9999px] h-0 w-0 opacity-0"
+        />
         <label htmlFor="signup-email" className="sr-only">
           Email address
         </label>

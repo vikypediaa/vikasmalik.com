@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-// TODO: draft for Vikas to review before launch. Fill in the signup provider once chosen (spec s8).
+// TODO: draft for Vikas to review before launch.
 export default function Privacy() {
   return (
     <main className="mx-auto max-w-[720px] px-4 py-16 lg:px-8">
@@ -46,8 +46,8 @@ export default function Privacy() {
           <ul className="list-disc space-y-2 pl-6">
             <li>
               <strong className="text-ink">Email signup.</strong> If you
-              subscribe to field notes, I store your email address with my email
-              provider so I can send you occasional updates. I use it for
+              subscribe to field notes, I store your email address with Kit, my
+              email provider, so I can send you occasional updates. I use it for
               nothing else.
             </li>
             <li>
@@ -93,8 +93,8 @@ export default function Privacy() {
             Who else sees it
           </h2>
           <p>
-            Only the services above: my email provider, Cal.com, Vercel (hosting
-            and analytics) and my email host. I do not sell your data.
+            Only the services above: Kit (email signup), Cal.com, Vercel
+            (hosting and analytics) and my email host. I do not sell your data.
           </p>
         </section>
       </div>

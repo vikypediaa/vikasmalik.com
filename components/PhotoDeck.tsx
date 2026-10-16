@@ -23,7 +23,10 @@ export function PhotoDeck() {
         ))}
       </ul>
 
-      <div className="relative h-[340px] w-[310px] touch-pan-y" {...swipe}>
+      <div
+        className="relative isolate h-[340px] w-[310px] touch-pan-y"
+        {...swipe}
+      >
         {photos.map((ph, i) => {
           const p = order.indexOf(i);
           const rotate = p === 0 ? -3 : p * 2.2 - 2;

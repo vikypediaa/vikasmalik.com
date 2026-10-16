@@ -2,11 +2,10 @@
 
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
-import { links } from "@/lib/content";
 
-// TODO(spec s8): set NEXT_PUBLIC_CAL_LINK to "username/event-slug" for "20 min intro with Vik".
-// Until then the button falls back to an email so it never dead-ends.
-const CAL_LINK = process.env.NEXT_PUBLIC_CAL_LINK;
+// Cal.com event as "username/event-slug". Override with NEXT_PUBLIC_CAL_LINK if the event changes.
+const CAL_LINK =
+  process.env.NEXT_PUBLIC_CAL_LINK || "vikypediaa/20-min-intro-with-vikas";
 const NAMESPACE = "intro";
 
 const className =
@@ -14,7 +13,6 @@ const className =
 
 export function CalButton({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    if (!CAL_LINK) return;
     (async () => {
       const cal = await getCalApi({ namespace: NAMESPACE });
       cal("ui", {
@@ -24,17 +22,6 @@ export function CalButton({ children }: { children: React.ReactNode }) {
       });
     })();
   }, []);
-
-  if (!CAL_LINK) {
-    return (
-      <a
-        href={`mailto:${links.email}?subject=${encodeURIComponent("20-min intro call")}`}
-        className={className}
-      >
-        {children}
-      </a>
-    );
-  }
 
   return (
     <button
