@@ -2,10 +2,10 @@
 
 Vikas Malik's one-page personal site. Build it from the approved spec, nothing more.
 
-- Spec (source of truth): `../docs/superpowers/specs/2026-10-15-vikasmalik-com-design.md`
+- Spec (source of truth): `~/Desktop/Life-OS/AIS-OS/docs/superpowers/specs/2026-10-15-vikasmalik-com-design.md` (private, kept in Life-OS)
 - Visual reference: `design/RidgelineA1.dc.html` (a Claude Design artboard; read its inline styles and SVG paths, do not ship this file)
 - Headshot: `public/headshot.png`
-- Sister project for stack conventions: `../effiscale/apps/web` (Next.js 16, React 19, Tailwind v4, Cal.com embed)
+- Sister project for stack conventions: `~/Desktop/Projects/effiscale/apps/web` (Next.js 16, React 19, Tailwind v4, Cal.com embed)
 
 Rules
 - British English. No em dashes in site copy. Copy comes from the spec; ask before changing it.

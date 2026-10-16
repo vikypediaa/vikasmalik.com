@@ -2,10 +2,10 @@
 
 **In the Claude desktop app (recommended):**
 1. Open the Claude app and click the **Code** tab.
-2. Choose **Local**, click **Select folder** and pick `Desktop/Life-OS/AIS-OS/vikasmalik-com`.
+2. Choose **Local**, click **Select folder** and pick `Desktop/Projects/vikasmalik.com`.
 3. Set the permission mode to **Manual** or **Plan** for the first step, then paste the prompt below.
 
-**Or in a terminal:** `cd ~/Desktop/Life-OS/AIS-OS/vikasmalik-com`, run `claude`, paste the prompt.
+**Or in a terminal:** `cd ~/Desktop/Projects/vikasmalik.com`, run `claude`, paste the prompt.
 
 ---
 
