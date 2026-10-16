@@ -56,8 +56,9 @@ export default function Privacy() {
               add) go to Cal.com and to me. Cal.com has its own privacy notice.
             </li>
             <li>
-              <strong className="text-ink">Email.</strong> If you write to me, I
-              keep the message and my reply so I can follow up.
+              <strong className="text-ink">Email.</strong> If you write to
+              hello@vikasmalik.com, my domain host forwards it to my personal
+              Gmail inbox. I keep the message and my reply so I can follow up.
             </li>
             <li>
               <strong className="text-ink">Visit statistics.</strong> I use
@@ -94,7 +95,8 @@ export default function Privacy() {
           </h2>
           <p>
             Only the services above: Kit (email signup), Cal.com, Vercel
-            (hosting and analytics) and my email host. I do not sell your data.
+            (hosting and analytics), my domain and email host (Namebright) and
+            Google (Gmail). I do not sell your data.
           </p>
         </section>
       </div>
