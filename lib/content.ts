@@ -2,11 +2,9 @@
 // Anything marked TODO is a section 8 placeholder waiting on Vikas.
 
 export const links = {
-  // TODO(spec s8): confirm LinkedIn URL. A1 design uses /in/vikmal.
   linkedin: "https://www.linkedin.com/in/vikmal",
   // TODO(spec s8): Cal.com event link for "20 min intro with Vik". Falls back to #book until supplied.
   cal: "#book",
-  // TODO(spec s8): repo does not exist yet. URL from spec s6; do not publish until created.
   github: "https://github.com/vikypediaa/vikasmalik.com",
   effiscale: "https://effiscale.ai",
   email: "hello@vikasmalik.com",
@@ -161,6 +159,8 @@ export const builds = {
 export const about = {
   label: "04 · Off the trail",
   body: "When I'm not at my desk, I'm usually on a trail somewhere in the UK: running, hiking, or stopping too often to take photos. It's where I do my best thinking, and it's why I'm building Hikedaily. Outside the day job, I'm learning to build with AI and sharing what works (and what breaks) on LinkedIn.",
+  photoAlt:
+    "Old stone watermill beside a mossy stream in Borrowdale, Lake District",
   tags: [
     "Trail running",
     "Hiking",
